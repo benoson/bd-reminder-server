@@ -100,7 +100,7 @@ const mainLoop = () => {
         message: e?.message || "Sorry, something went wrong, please try again",
       };
     }
-  }, 1000);
+  }, ONE_HOUR);
 };
 
 app.listen(port, () => {
