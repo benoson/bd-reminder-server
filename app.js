@@ -110,4 +110,5 @@ const mainLoop = () => {
 app.listen(port, () => {
   console.log(`Brithday reminder server listening on port ${port}`);
   mainLoop();
+  //
 });
