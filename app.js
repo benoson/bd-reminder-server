@@ -69,7 +69,7 @@ const mainLoop = () => {
     const now = new Date();
     const hour = now.getHours();
 
-    if (hour !== 7) return;
+    if (hour !== 8) return;
 
     const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf8") || "[]");
 
