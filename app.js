@@ -17,7 +17,11 @@ const NIKI_BOT_CHAT_ID = "1550770814";
 const DATA_FILE = "./data.json";
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.get("/", (req, res) => {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf8") || "[]");
