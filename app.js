@@ -12,7 +12,7 @@ const ai = new GoogleGenAI({
 });
 
 const NIKI_BOT_TELEGRAM_TOKEN = "7605364570:AAEmYL90YnMY1tIhCbgKtk4hOM2fRpVYEpA";
-const NIKI_BOT_CHAT_ID = "6162217510";
+const NIKI_BOT_CHAT_ID = "1550770814";
 
 const DATA_FILE = "./data.json";
 
@@ -51,9 +51,11 @@ app.post("/birthday", async (req, res) => {
 });
 
 const sendMessage = async (message = "Could not send message") => {
-  await fetch(
+  const res = await fetch(
     `https://api.telegram.org/bot${NIKI_BOT_TELEGRAM_TOKEN}/sendMessage?chat_id=${NIKI_BOT_CHAT_ID}&text=${message}`
   );
+
+  console.log("res", res);
 };
 
 const ONE_HOUR = 1000 * 60 * 60;
